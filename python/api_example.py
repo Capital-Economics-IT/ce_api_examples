@@ -15,7 +15,8 @@ import urllib.parse as UrlParse
 USERNAME = '<replace with your credentials>'
 PASSWORD = '<replace with your credentials>'
 
-# Sample data to query
+# Sample data to query, these are valid series as at July 2024
+# to test the response for no matching data replace the series ids with invalid ones, e.g. 'INVALID_SERIES_ID'
 SAMPLE_SERIES_IDS = ['ADECO_CCPIYY', 'ADECO_CPIYY']
 
 # Base API URL

@@ -4,7 +4,7 @@
 
 ## Introduction
 
-This sample script(s) supplied herein demonstrate a simple query, in Python, to both the data & metadata endpoints of the API.
+This sample script [api_example.py](./api_example.py) supplied demonstrate a simple query, in Python, to both the data & metadata endpoints of the API.
 
 The returned data, in JSON format, can then be used in your own applications.
 
