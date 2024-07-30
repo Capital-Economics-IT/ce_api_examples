@@ -28,6 +28,7 @@ class GetMetaData:
     def query(self) -> dict:
         """Basic query to get meta data"""
         try:
+            # Query parameters, see main README for more details
             query = {
                 'skey': ','.join(SAMPLE_SERIES_IDS),
                 'f_code': '',  # or specify a frequency, e.g. 'M' for monthly
@@ -35,6 +36,7 @@ class GetMetaData:
                 'vers': '1',  # version of the API, omit for latest
             }
             url = f'{self.URL}?{UrlParse.urlencode(query)}'
+
             # Diagnostics
             print(f'\n# Url - {url}\n')
 
@@ -50,6 +52,7 @@ class GetData:
     def query(self) -> dict:
         """Basic query to get data"""
         try:
+            # Query parameters, see main README for more details
             query = {
                 'skey': ','.join(SAMPLE_SERIES_IDS),
                 'f_code': 'M',  # Monthly, other frequencies Y/Q/M/W/D
@@ -60,6 +63,7 @@ class GetData:
                 'vers': '1',  # version of the API, omit for latest
             }
             url = f'{self.URL}?{UrlParse.urlencode(query)}'
+
             # Diagnostics
             print(f'\n# Url - {url}\n')
 

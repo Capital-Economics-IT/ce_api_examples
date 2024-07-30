@@ -28,7 +28,7 @@ We provide 2 main endpoints for the API:
 * **Metadata** 
 * **Data**
 
-An optional `?vers=parameter` can be added to specify the version of the API you wich to use. _The latest current version will be used if no version is specified._
+An optional `?vers=number` can be added to specify the version of the API you wich to use. _The latest current version will be used if no version is specified._
 
 Each API endpoint requires **basic authentication** (see above) along with assorted query parameters to specify the data you wish to retrieve.
 
@@ -37,7 +37,9 @@ Each API endpoint requires **basic authentication** (see above) along with assor
 
 URI `https://capitaleconomics.com/api/middletier/metadata/prod`
 
-This endpoint provides access to our economic series metadata. 
+This endpoint provides access to our economic series metadata.
+
+The returned data is 
 
 ### Query Parameters
 
@@ -96,6 +98,6 @@ Series Info. Another _optional_ parameter, if set to `TRUE` will return series m
 
 We have provided some code snippets in this repository to help you get started.
 
-* **Python** - We have provided a Python script that demonstrates how to use the API to retrieve data.
+* **Python** - We have provided a sample Python script that demonstrates how to use the API to retrieve data, click [here](./python/README.md) for more details
 
 Enjoy!
