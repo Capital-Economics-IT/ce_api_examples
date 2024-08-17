@@ -32,14 +32,14 @@ An optional `?vers=number` can be added to specify the version of the API you wi
 
 Each API endpoint requires **basic authentication** (see above) along with assorted query parameters to specify the data you wish to retrieve.
 
+The returned data is in JSON format.
+
 
 ## Metadata API
 
 URI `https://capitaleconomics.com/api/middletier/metadata/prod`
 
 This endpoint provides access to our economic series metadata.
-
-The returned data is 
 
 ### Query Parameters
 
