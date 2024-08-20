@@ -16,7 +16,7 @@ Have a valid subscription to the Capital Economics API, see [project docs](../RE
 
 ## Usage
 
-Replace the **USERNAME** and **PASSWORD** values with your own credentials.
+Replace the **API_KEY** value with your own api-key credentials.
 
 
 ## Note
