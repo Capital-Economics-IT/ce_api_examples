@@ -12,8 +12,7 @@ import json
 import urllib.parse as UrlParse
 
 # Replace with your username & password
-USERNAME = '<replace with your credentials>'
-PASSWORD = '<replace with your credentials>'
+API_KEY = '<replace with your api key>'
 
 # Sample data to query, these are valid series as at July 2024
 # to test the response for no matching data replace the series ids with invalid ones, e.g. 'INVALID_SERIES_ID'
@@ -31,6 +30,7 @@ class GetMetaData:
         try:
             # Query parameters, see main README for more details
             query = {
+                'api_key': API_KEY,  # see above
                 'skey': ','.join(SAMPLE_SERIES_IDS),
                 'f_code': '',  # or specify a frequency, e.g. 'M' for monthly
                 't_code': '',  # or specify a type, e.g. 'F' for forecast
@@ -41,7 +41,7 @@ class GetMetaData:
             # Diagnostics
             print(f'\n# Url - {url}\n')
 
-            response = requests.get(url, auth=HTTPBasicAuth(USERNAME, PASSWORD))
+            response = requests.get(url)
             return json.loads(response.content)
         except Exception as e:
             print(f'Error: {e}')
@@ -55,6 +55,7 @@ class GetData:
         try:
             # Query parameters, see main README for more details
             query = {
+                'api_key': API_KEY,  # see above
                 'skey': ','.join(SAMPLE_SERIES_IDS),
                 'f_code': 'M',  # Monthly, other frequencies Y/Q/M/W/D
                 't_code': '',  # or specify a type, e.g. 'F' for forecast
@@ -68,7 +69,7 @@ class GetData:
             # Diagnostics
             print(f'\n# Url - {url}\n')
 
-            response = requests.get(url, auth=HTTPBasicAuth(USERNAME, PASSWORD))
+            response = requests.get(url)
             return json.loads(response.content)
         except Exception as e:
             print(f'Error: {e}')
