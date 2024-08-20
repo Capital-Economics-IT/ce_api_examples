@@ -23,7 +23,7 @@ BASE_URL = 'https://capitaleconomics.com/api/middletier'
 
 
 class GetMetaData:
-    URL = f'{BASE_URL}/metadata/prod'
+    URL = f'{BASE_URL}/metadata'
 
     def query(self) -> dict:
         """Basic query to get meta data"""
@@ -48,7 +48,7 @@ class GetMetaData:
 
 
 class GetData:
-    URL = f'{BASE_URL}/data/prod'
+    URL = f'{BASE_URL}/data'
 
     def query(self) -> dict:
         """Basic query to get data"""
