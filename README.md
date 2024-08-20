@@ -37,9 +37,9 @@ The returned data is in JSON format.
 
 ## Metadata API
 
-URI `https://capitaleconomics.com/api/middletier/metadata/prod`
+URI `https://capitaleconomics.com/api/middletier/metadata`
 
-This endpoint provides access to our economic series metadata.
+This endpoint provides access to our _live_ economic series metadata.
 
 ### Query Parameters
 
@@ -65,9 +65,11 @@ Type. The type of the data required, either "AC" for actual data, "F" for Capita
 
 ## Data API
 
-URI `https://capitaleconomics.com/api/middletier/data/prod`
+URI `https://capitaleconomics.com/api/middletier/data`
 
-This endpoint provides access to our economic data and forecasts. _This is essentially time based series data._
+This endpoint provides access to our _live_ economic data and forecasts. 
+
+This is essentially time based series data.
 
 ### Query Parameters
 
