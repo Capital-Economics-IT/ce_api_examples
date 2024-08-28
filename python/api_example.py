@@ -25,13 +25,11 @@ BASE_URL = 'https://api.capitaleconomics.com/middletier/' + VERSION
 class GetMetaData:
     URL = f'{BASE_URL}/metadata'
 
-    def __init__(self, args: dict):
-        self.args = args
-
-    def api(self) -> dict:
+    @staticmethod
+    def query(args: dict) -> dict:
         """Basic query to get meta data"""
         try:
-            url = f'{self.URL}?{UrlParse.urlencode(self.args)}'
+            url = f'{self.URL}?{UrlParse.urlencode(args)}'
 
             # Diagnostics
             print(f'\n# Url - {url}\n')
@@ -53,7 +51,7 @@ args = {
     'f_code': '',  # or specify a frequency, e.g. 'M' for monthly
     't_code': '',  # or specify a type, e.g. 'F' for forecast
 }
-res = GetMetaData(args).api()
+res = GetMetaData().query(args)
 print(res)
 
 # Get sample data, see main README for more details
@@ -66,5 +64,5 @@ args = {
     'end_date': '2021-12-31',  # end of 2021
     'series_info': 'true',
 }
-res = GetData(args).api()
+res = GetData().query(args)
 print(res)
