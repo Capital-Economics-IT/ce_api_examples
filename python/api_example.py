@@ -6,8 +6,6 @@
 # (c) 2024, Capital Economics Ltd.
 
 import requests
-from requests.auth import HTTPBasicAuth
-
 import json
 import urllib.parse as UrlParse
 
@@ -25,8 +23,7 @@ BASE_URL = 'https://api.capitaleconomics.com/middletier/' + VERSION
 class GetMetaData:
     URL = f'{BASE_URL}/metadata'
 
-    @staticmethod
-    def query(args: dict) -> dict:
+    def query(self, args: dict) -> dict:
         """Basic query to get meta data"""
         try:
             url = f'{self.URL}?{UrlParse.urlencode(args)}'
