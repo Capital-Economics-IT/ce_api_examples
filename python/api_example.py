@@ -19,7 +19,7 @@ API_KEY = '<replace with your api key>'
 SAMPLE_SERIES_IDS = ['ADECO_CCPIYY', 'ADECO_CPIYY']
 
 # Base API URL
-BASE_URL = 'https://capitaleconomics.com/api/middletier'
+BASE_URL = 'https://api.capitaleconomics.com/middletier/1.0'
 
 
 class GetMetaData:
