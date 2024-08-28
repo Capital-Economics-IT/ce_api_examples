@@ -19,24 +19,19 @@ API_KEY = '<replace with your api key>'
 SAMPLE_SERIES_IDS = ['ADECO_CCPIYY', 'ADECO_CPIYY']
 
 # Base API URL
-BASE_URL = 'https://api.capitaleconomics.com/middletier/1.0'
-
+VERSION='1.0'
+BASE_URL = 'https://api.capitaleconomics.com/middletier/' + VERSION
 
 class GetMetaData:
     URL = f'{BASE_URL}/metadata'
 
-    def query(self) -> dict:
+    def __init__(self, args: dict):
+        self.args = args
+
+    def api(self) -> dict:
         """Basic query to get meta data"""
         try:
-            # Query parameters, see main README for more details
-            query = {
-                'api_key': API_KEY,  # see above
-                'skey': ','.join(SAMPLE_SERIES_IDS),
-                'f_code': '',  # or specify a frequency, e.g. 'M' for monthly
-                't_code': '',  # or specify a type, e.g. 'F' for forecast
-                'vers': '1',  # version of the API, omit for latest
-            }
-            url = f'{self.URL}?{UrlParse.urlencode(query)}'
+            url = f'{self.URL}?{UrlParse.urlencode(self.args)}'
 
             # Diagnostics
             print(f'\n# Url - {url}\n')
@@ -47,38 +42,29 @@ class GetMetaData:
             print(f'Error: {e}')
 
 
-class GetData:
+class GetData(GetMetaData):
     URL = f'{BASE_URL}/data'
 
-    def query(self) -> dict:
-        """Basic query to get data"""
-        try:
-            # Query parameters, see main README for more details
-            query = {
-                'api_key': API_KEY,  # see above
-                'skey': ','.join(SAMPLE_SERIES_IDS),
-                'f_code': 'M',  # Monthly, other frequencies Y/Q/M/W/D
-                't_code': '',  # or specify a type, e.g. 'F' for forecast
-                'start_date': '2020-01-01',  # start of 2020
-                'end_date': '2021-12-31',  # end of 2021
-                'series_info': 'true',
-                'vers': '1',  # version of the API, omit for latest
-            }
-            url = f'{self.URL}?{UrlParse.urlencode(query)}'
 
-            # Diagnostics
-            print(f'\n# Url - {url}\n')
+# Get sample metadata, see main README for more details
+args = {
+    'api_key': API_KEY,  # see above
+    'skey': ','.join(SAMPLE_SERIES_IDS),
+    'f_code': '',  # or specify a frequency, e.g. 'M' for monthly
+    't_code': '',  # or specify a type, e.g. 'F' for forecast
+}
+res = GetMetaData(args).api()
+print(res)
 
-            response = requests.get(url)
-            return json.loads(response.content)
-        except Exception as e:
-            print(f'Error: {e}')
-
-
-# Get metadata
-metadata = GetMetaData().query()
-print(metadata)
-
-# Get data
-data = GetData().query()
-print(data)
+# Get sample data, see main README for more details
+args = {
+    'api_key': API_KEY,  # see above
+    'skey': ','.join(SAMPLE_SERIES_IDS),
+    'f_code': 'M',  # Monthly, other frequencies Y/Q/M/W/D
+    't_code': '',  # or specify a type, e.g. 'F' for forecast
+    'start_date': '2020-01-01',  # start of 2020
+    'end_date': '2021-12-31',  # end of 2021
+    'series_info': 'true',
+}
+res = GetData(args).api()
+print(res)
