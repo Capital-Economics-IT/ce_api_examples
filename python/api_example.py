@@ -43,7 +43,7 @@ class GetData(GetMetaData):
 
 # Get sample metadata, see main README for more details
 args = {
-    'api_key': API_KEY,  # see above
+    'api-key': API_KEY,  # see above
     'skey': ','.join(SAMPLE_SERIES_IDS),
     'f_code': '',  # or specify a frequency, e.g. 'M' for monthly
     't_code': '',  # or specify a type, e.g. 'F' for forecast
