@@ -53,7 +53,7 @@ print(res)
 
 # Get sample data, see main README for more details
 args = {
-    'api_key': API_KEY,  # see above
+    'api-key': API_KEY,  # see above
     'skey': ','.join(SAMPLE_SERIES_IDS),
     'f_code': 'M',  # Monthly, other frequencies Y/Q/M/W/D
     't_code': '',  # or specify a type, e.g. 'F' for forecast
