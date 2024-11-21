@@ -28,7 +28,7 @@ We provide 2 main endpoints for the API:
 * **Metadata** 
 * **Data**
 
-An optional `?vers=number` can be added to specify the version of the API you wich to use. _The latest current version will be used if no version is specified._
+An optional `?vers=number` can be added to specify the version of the API you wish to use. _The latest current version will be used if no version is specified._
 
 Each API endpoint requires **basic authentication** (see above) along with assorted query parameters to specify the data you wish to retrieve.
 
@@ -71,7 +71,7 @@ URI `https://api.capitaleconomics.com/middletier/1.0/data`
 
 This endpoint provides access to our _live_ economic data and forecasts. 
 
-This is essentially time based series data.
+This is essentially time-based series data.
 
 _If you want to use the development system then add `/dev` to the URL._
 
