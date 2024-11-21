@@ -41,6 +41,8 @@ URI `https://api.capitaleconomics.com/middletier/1.0/metadata`
 
 This endpoint provides access to our _live_ economic series metadata.
 
+_If you want to use the development system then add `/dev` to the URL._
+
 ### Query Parameters
 
 The query parameters for the metadata endpoint are as follows:
@@ -70,6 +72,8 @@ URI `https://api.capitaleconomics.com/middletier/1.0/data`
 This endpoint provides access to our _live_ economic data and forecasts. 
 
 This is essentially time based series data.
+
+_If you want to use the development system then add `/dev` to the URL._
 
 ### Query Parameters
 
