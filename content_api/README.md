@@ -13,8 +13,8 @@ For more details about the APIs and Excel plugin see our [Data Capabilities page
 ## Getting Started
 
 1. **Obtain an API subscription** - To use the API you will need to have an api-user account. Please contact your account manager for more details.
-2. We use generated**API keys** to authenticate users API requests. You will need to provide your_api-key_ as a query string argument (more details below).
-3. Call the API endpoint! We have provided some examples in this repository to help you get started.
+2. We use generated **API keys** to authenticate users API requests. You will need to provide your api-key as a query string argument (more details below).
+3. Call the API endpoint!
 
 ## Endpoint
 
@@ -94,7 +94,7 @@ By default, these will return up to 50 items, sorted by most recent first.
 
 ## Optional Query Parameters
 
-#### page
+### page
 
 The default of 50 items can be altered by using the `page` query parameter, such as:
 
@@ -108,7 +108,7 @@ The offset parameter can be used to skip a number of pages:
 
 `?page[limit]=5&page[offset]=3`
 
-#### filter
+### filter
 
 Filters allow you to reduce the amount of data returned by specifying, for example, the article title text, or a timestamp.
 
