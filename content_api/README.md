@@ -2,7 +2,7 @@
 
 (c) 2026 Capital Economics Ltd.
 
-This repository contains examples of how to use the Capital Economics Content API.
+This section contains examples of how to use the Capital Economics Content API.
 
 ## Introduction
 
@@ -16,13 +16,13 @@ For more details about the APIs and Excel plugin see our [Data Capabilities page
 2. We use generated**API keys** to authenticate users API requests. You will need to provide your_api-key_ as a query string argument (more details below).
 3. Call the API endpoint! We have provided some examples in this repository to help you get started.
 
-## APIs
+## Endpoint
 
 There is one main endpoint for the Content API:
 
 URI `https://api.capitaleconomics.com/json`
 
-## API Key Query Parameter
+## Mandatory Query Parameter
 
 #### api-key
 
@@ -92,8 +92,7 @@ The first sub-endpoints likely to be accessed wil be either `/json/node/article`
 
 By default, these will return up to 50 items, sorted by most recent first.
 
-#### filter
-
+## Optional Query Parameters
 
 #### page
 
@@ -109,3 +108,25 @@ Minimum = 1, Maximum = 100, default = 50.
 The offset parameter can be used to start at a specific page:
 
 `?page[limit]=5&page[offset]=3`
+
+
+#### filter
+
+Filters allow you to reduce the amount of data returned by specifying, for example, the article title text, or a timestamp.
+
+Example: *Title contains "Japan"*
+
+?filter[title][condition][path]=title
+&filter[title][condition][operator]=CONTAINS
+&filter[title][condition][value]=Japan
+
+Note: All three of these parts together define the filter: path, operator and value.
+
+Example: *Published after timestamp*
+
+?filter[published_at][condition][path]=published_at
+&filter[published_at][condition][operator]=>=
+&filter[published_at][condition][value]=1765800223
+
+Here, the timestamp is a unix timestamp.
+
