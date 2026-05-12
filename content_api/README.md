@@ -102,13 +102,11 @@ The default of 50 items can be altered by using the `page` query parameter, such
 
 Minimum = 1, Maximum = 100, default = 50.
 
-
 ### offset
 
 The offset parameter can be used to skip a number of pages:
 
 `?page[limit]=5&page[offset]=3`
-
 
 #### filter
 
@@ -116,17 +114,16 @@ Filters allow you to reduce the amount of data returned by specifying, for examp
 
 Example: *Title contains "Japan"*
 
-?filter[title][condition][path]=title
+`?filter[title][condition][path]=title
 &filter[title][condition][operator]=CONTAINS
-&filter[title][condition][value]=Japan
+&filter[title][condition][value]=Japan`
 
 Note: All three of these parts together define the filter: path, operator and value.
 
 Example: *Published after timestamp*
 
-?filter[published_at][condition][path]=published_at
+`?filter[published_at][condition][path]=published_at
 &filter[published_at][condition][operator]=>=
-&filter[published_at][condition][value]=1765800223
+&filter[published_at][condition][value]=1765800223`
 
 Here, the timestamp is a unix timestamp.
-
