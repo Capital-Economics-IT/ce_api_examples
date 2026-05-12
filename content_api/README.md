@@ -24,7 +24,7 @@ URI `https://api.capitaleconomics.com/json`
 
 ## Mandatory Query Parameter
 
-#### api-key
+### api-key
 
 This will be a _32 character_ API key that you will have been provided; contact your account manager for more details. This is a **required** parameter.  For example:
 
@@ -88,7 +88,7 @@ Accessing the endpoint in this way with no further query parameters will return 
 
 Note: Your api-key is ***required on every access*** made.  However, for the purposes of clarity we will omit it from these examples.
 
-The first sub-endpoints likely to be accessed wil be either `/json/node/article` or `/json/node/publication`
+The first sub-endpoints likely to be accessed will be either `/json/node/article` or `/json/node/publication`
 
 By default, these will return up to 50 items, sorted by most recent first.
 
