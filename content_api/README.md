@@ -105,7 +105,7 @@ Minimum = 1, Maximum = 100, default = 50.
 
 ### offset
 
-The offset parameter can be used to start at a specific page:
+The offset parameter can be used to skip a number of pages:
 
 `?page[limit]=5&page[offset]=3`
 
