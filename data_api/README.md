@@ -1,4 +1,4 @@
-# Capital Economics - API Examples
+# Capital Economics - Data API Examples
 
 (c) 2026 Capital Economics Ltd.
 
@@ -18,7 +18,7 @@ For more details about the APIs and Excel plugin see our [Data Capabilities page
 
 ## APIs
 
-We provide 2 main endpoints for the API:
+We provide 2 main endpoints for the Data API:
 
 * **Metadata**
 * **Data**

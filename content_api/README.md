@@ -114,16 +114,20 @@ Filters allow you to reduce the amount of data returned by specifying, for examp
 
 Example: *Title contains "Japan"*
 
-`?filter[title][condition][path]=title
-&filter[title][condition][operator]=CONTAINS
-&filter[title][condition][value]=Japan`
+`?filter[title][condition][path]=title&filter[title][condition][operator]=CONTAINS&filter[title][condition][value]=Japan`
 
 Note: All three of these parts together define the filter: path, operator and value.
 
 Example: *Published after timestamp*
 
-`?filter[published_at][condition][path]=published_at
-&filter[published_at][condition][operator]=>=
-&filter[published_at][condition][value]=1765800223`
+`?filter[published_at][condition][path]=published_at&filter[published_at][condition][operator]=>=&filter[published_at][condition][value]=1765800223`
 
 Here, the timestamp is a unix timestamp.
+
+## Code snippets
+
+We have provided some code snippets in this repository to help you get started.
+
+* **Python** - We have provided a sample Python script that demonstrates how to use the API to retrieve data, click [here](./python/README.md) for more details
+
+Enjoy!

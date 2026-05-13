@@ -1,10 +1,10 @@
-# Capital Economics - Data API Python snippet
+# Capital Economics - Content API Python snippet
 
 (c) 2026 Capital Economics Ltd.
 
 ## Introduction
 
-This sample Python script [data_api_example.py](./data_api_example.py) demonstrates a simple query to both the data & metadata endpoints of the API. 
+This sample Python script [content_api_example.py](./content_api_example.py) demonstrates a simple query to the endpoint of the API. 
 
 The returned data, in JSON format, would then be consumed by your own custom applications.
 
