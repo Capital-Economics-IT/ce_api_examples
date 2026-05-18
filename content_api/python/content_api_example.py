@@ -7,8 +7,7 @@
 
 import requests
 import json
-from datetime import datetime, timedelta, timezone
-from urllib.parse import quote
+from datetime import datetime
 
 # Replace with your api-key
 API_KEY = '<replace with your api key>'
