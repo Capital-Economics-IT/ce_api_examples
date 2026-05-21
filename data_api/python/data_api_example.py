@@ -18,7 +18,7 @@ SAMPLE_SERIES_IDS = ['ADECO_CCPIYY', 'ADECO_CPIYY']
 
 # Base API URL
 VERSION = '1.0'
-BASE_URL = 'https://api.capitaleconomics.com/middletier/' + VERSION
+BASE_URL = 'https://api.capitaleconomics.com/api/middletier/' + VERSION
 
 class GetMetaData:
     URL = f'{BASE_URL}/metadata'
